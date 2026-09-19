@@ -4,27 +4,26 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇲🇾 MY 01 - xiaohe
-  type: vmess
-  server: 47.250.135.244
-  port: 10000
-  uuid: aedc66b8-99d7-4a21-8310-61870e7f870d
-  alterId: 0
-  cipher: auto
+- name: 🇮🇷 IR 01 - xiaohe
+  type: vless
+  server: simia.northforex.ir
+  port: 8443
+  uuid: 22ac8d19-9eec-493d-a492-e024cdba594b
   udp: true
-  tls: false
+  tls: true
   skip-cert-verify: true
+  servername: simia.northforex.ir
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇲🇾 MY 01 - xiaohe
+  - 🇮🇷 IR 01 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - 🇲🇾 MY 01 - xiaohe
+  - 🇮🇷 IR 01 - xiaohe
 rules:
 - MATCH,PROXIES
