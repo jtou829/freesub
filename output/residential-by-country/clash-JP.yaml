@@ -4,31 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇺🇿 UZ 01 - xiaohe
+- name: 🇯🇵 日本 (Japan) 01 (家宽) - xiaohe
   type: vless
-  server: 104.18.80.149
-  port: 443
-  uuid: 50414e45-4c5f-5a45-5553-4017ea8bea78
+  server: 172.67.152.71
+  port: 8880
+  uuid: e1bd06de-a075-4ad5-b73f-b54587368cc7
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-  servername: zeus-panel-mvtum1.mahdiharchegani.workers.dev
   network: ws
   ws-opts:
-    path: /stream/PANEL_ZEUS/4017ea8bea78/loc-4
+    path: /pyip=ProxyIP.JP.CMLiussss.net
     headers:
-      Host: zeus-panel-mvtum1.mahdiharchegani.workers.dev
+      Host: morning-feather-dc98.136-25b.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇺🇿 UZ 01 - xiaohe
+  - 🇯🇵 日本 (Japan) 01 (家宽) - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - 🇺🇿 UZ 01 - xiaohe
+  - 🇯🇵 日本 (Japan) 01 (家宽) - xiaohe
 rules:
 - MATCH,PROXIES
