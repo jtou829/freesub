@@ -15,7 +15,7 @@ proxies:
   servername: fbsv6.guardora.pro
   network: ws
   ws-opts:
-    path: /ws
+    path: /ws?ed#Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
     headers:
       Host: fbsv6.guardora.pro
 - name: 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
@@ -29,7 +29,7 @@ proxies:
   servername: fbsv6.guardora.pro
   network: ws
   ws-opts:
-    path: /ws?ed#Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
+    path: /ws
     headers:
       Host: fbsv6.guardora.pro
 proxy-groups:
