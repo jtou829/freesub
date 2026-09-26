@@ -4,33 +4,34 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇸🇪 SE 01 - xiaohe
+- name: 🇵🇱 PL 01 - xiaohe
   type: ss
-  server: 70.34.212.124
-  port: 8388
-  cipher: aes-256-gcm
-  password: AxIYWtskJWIIaefW
-  udp: true
-- name: 🇸🇪 SE 02 - xiaohe
-  type: ss
-  server: 172.238.244.13
+  server: 146.59.116.19
   port: 17000
   cipher: aes-256-gcm
   password: pX0uhU3ZjUcLWYs0Vez55BO3JoQrRlL
   udp: true
+- name: 🇵🇱 PL 02 - xiaohe
+  type: vless
+  server: 82.47.63.156
+  port: 2053
+  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
+  udp: true
+  tls: false
+  skip-cert-verify: true
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇸🇪 SE 01 - xiaohe
-  - 🇸🇪 SE 02 - xiaohe
+  - 🇵🇱 PL 01 - xiaohe
+  - 🇵🇱 PL 02 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - 🇸🇪 SE 01 - xiaohe
-  - 🇸🇪 SE 02 - xiaohe
+  - 🇵🇱 PL 01 - xiaohe
+  - 🇵🇱 PL 02 - xiaohe
 rules:
 - MATCH,PROXIES
