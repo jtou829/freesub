@@ -5,13 +5,55 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇪🇸 西班牙 (Spain) 01 - xiaohe
+  type: vless
+  server: 172.67.142.169
+  port: 443
+  uuid: 4c0b7280-76bb-495c-9c8b-f05712ebf805
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: youxuanku.kdns.fr
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: youxuanku.kdns.fr
+- name: 🇪🇸 西班牙 (Spain) 02 - xiaohe
+  type: vless
+  server: 104.25.3.165
+  port: 443
+  uuid: 737678dc-cc15-4643-85a4-ca9359df1aa4
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: patient-moon-c61f.ggfsa55.workers.dev
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: patient-moon-c61f.ggfsa55.workers.dev
+- name: 🇪🇸 西班牙 (Spain) 03 - xiaohe
+  type: vless
+  server: 172.67.220.34
+  port: 443
+  uuid: ef23616d-8a9d-4b22-b2f5-9bda864de179
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: INDEX.Arcane509.Workers.DEV
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: index.arcane509.workers.dev
+- name: 🇪🇸 西班牙 (Spain) 04 - xiaohe
   type: ss
   server: 108.181.121.226
   port: 8388
   cipher: chacha20-ietf-poly1305
   password: WSyL4XTwNsdv
   udp: true
-- name: 🇪🇸 西班牙 (Spain) 02 - xiaohe
+- name: 🇪🇸 西班牙 (Spain) 05 - xiaohe
   type: vless
   server: es4.h1cloud.net
   port: 25047
@@ -23,14 +65,21 @@ proxies:
     public-key: opG0oNW-PMHi8V4E0101eEqOqPlZVKCuRkF6dcWeqBU
   servername: www.apple.com
   client-fingerprint: chrome
-- name: 🇪🇸 西班牙 (Spain) 03 - xiaohe
-  type: ss
-  server: 108.181.121.226
-  port: 8388
-  cipher: chacha20-ietf-poly1305
-  password: WSyL4XTwNsdv
+- name: 🇪🇸 西班牙 (Spain) 06 - xiaohe
+  type: vless
+  server: 104.21.63.28
+  port: 443
+  uuid: 4c0b7280-76bb-495c-9c8b-f05712ebf805
   udp: true
-- name: 🇪🇸 西班牙 (Spain) 04 - xiaohe
+  tls: true
+  skip-cert-verify: true
+  servername: youxuanku.kdns.fr
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: youxuanku.kdns.fr
+- name: 🇪🇸 西班牙 (Spain) 07 - xiaohe
   type: ss
   server: 140.174.184.5
   port: 8388
@@ -46,6 +95,9 @@ proxy-groups:
   - 🇪🇸 西班牙 (Spain) 02 - xiaohe
   - 🇪🇸 西班牙 (Spain) 03 - xiaohe
   - 🇪🇸 西班牙 (Spain) 04 - xiaohe
+  - 🇪🇸 西班牙 (Spain) 05 - xiaohe
+  - 🇪🇸 西班牙 (Spain) 06 - xiaohe
+  - 🇪🇸 西班牙 (Spain) 07 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -55,5 +107,8 @@ proxy-groups:
   - 🇪🇸 西班牙 (Spain) 02 - xiaohe
   - 🇪🇸 西班牙 (Spain) 03 - xiaohe
   - 🇪🇸 西班牙 (Spain) 04 - xiaohe
+  - 🇪🇸 西班牙 (Spain) 05 - xiaohe
+  - 🇪🇸 西班牙 (Spain) 06 - xiaohe
+  - 🇪🇸 西班牙 (Spain) 07 - xiaohe
 rules:
 - MATCH,PROXIES
