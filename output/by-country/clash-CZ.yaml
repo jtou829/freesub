@@ -4,29 +4,31 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇦🇱 AL 01 - xiaohe
+- name: 🇨🇿 CZ 01 - xiaohe
   type: vless
-  server: best.valaiqm.ir
-  port: 3037
-  uuid: a1fb63f7-a942-4010-a830-bc395703a9a4
+  server: 172.67.220.34
+  port: 443
+  uuid: ef23616d-8a9d-4b22-b2f5-9bda864de179
   udp: true
   tls: true
   skip-cert-verify: true
-  reality-opts:
-    public-key: cYQAluLQY4m0yBUkvqWo3LEXTp-_9In3gJUDoEMmn1U
-  servername: telewebion.ir
-  client-fingerprint: chrome
+  servername: INDEX.Arcane509.Workers.DEV
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: index.arcane509.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇦🇱 AL 01 - xiaohe
+  - 🇨🇿 CZ 01 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - 🇦🇱 AL 01 - xiaohe
+  - 🇨🇿 CZ 01 - xiaohe
 rules:
 - MATCH,PROXIES
