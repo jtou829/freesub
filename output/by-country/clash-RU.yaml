@@ -6,16 +6,7 @@ log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01 - xiaohe
   type: vless
-  server: 149.33.15.213
-  port: 443
-  uuid: 054362fb-e485-4a3f-9568-4c5b0f60e074
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: swz.proxyplankton.ru
-- name: 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
-  type: vless
-  server: xsru2.freeddns.org
+  server: 147.45.175.81
   port: 443
   uuid: c90395e6-2140-47ad-a54d-9b166729d3ef
   udp: true
@@ -33,13 +24,11 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇷🇺 俄罗斯 (Russia) 01 - xiaohe
-  - 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - 🇷🇺 俄罗斯 (Russia) 01 - xiaohe
-  - 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
 rules:
 - MATCH,PROXIES
