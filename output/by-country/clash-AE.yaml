@@ -6,57 +6,44 @@ log-level: info
 proxies:
 - name: 🇦🇪 阿联酋 (UAE) 01 - xiaohe
   type: vless
-  server: uae.unixzone.us
-  port: 22573
-  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
+  server: 95.174.68.188
+  port: 14430
+  uuid: 965ffbbe-c6b6-4d5f-8dea-6d8abc55d9c0
   udp: true
   tls: false
   skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /
+    path: /vless
     headers:
-      Host: uae.unixzone.us
+      Host: 95.174.68.188
 - name: 🇦🇪 阿联酋 (UAE) 02 - xiaohe
   type: vless
-  server: uae.unixzone.us
-  port: 22573
-  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
+  server: 95.174.68.188
+  port: 14430
+  uuid: 965ffbbe-c6b6-4d5f-8dea-6d8abc55d9c0
   udp: true
   tls: false
   skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /
+    path: /vless
     headers:
-      Host: uae.unixzone.us
+      Host: 95.174.68.188
 - name: 🇦🇪 阿联酋 (UAE) 03 - xiaohe
   type: vless
-  server: 95.174.68.188
-  port: 14430
-  uuid: 965ffbbe-c6b6-4d5f-8dea-6d8abc55d9c0
+  server: uae.unixzone.us
+  port: 22573
+  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
   udp: true
   tls: false
   skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /vless
+    path: /
     headers:
-      Host: 95.174.68.188
+      Host: uae.unixzone.us
 - name: 🇦🇪 阿联酋 (UAE) 04 - xiaohe
-  type: vless
-  server: 95.174.68.188
-  port: 14430
-  uuid: 965ffbbe-c6b6-4d5f-8dea-6d8abc55d9c0
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 95.174.68.188
-- name: 🇦🇪 阿联酋 (UAE) 05 - xiaohe
   type: vless
   server: uae.unixzone.us
   port: 22573
@@ -69,9 +56,22 @@ proxies:
     path: /
     headers:
       Host: uae.unixzone.us
+- name: 🇦🇪 阿联酋 (UAE) 05 - xiaohe
+  type: vless
+  server: 95.174.68.188
+  port: 14430
+  uuid: 965ffbbe-c6b6-4d5f-8dea-6d8abc55d9c0
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 95.174.68.188
 - name: 🇦🇪 阿联酋 (UAE) 06 - xiaohe
   type: vless
-  server: 84.235.244.108
+  server: uae.unixzone.us
   port: 22573
   uuid: 39947382-3212-41c9-bc3a-589574ac8b23
   udp: true
@@ -84,17 +84,17 @@ proxies:
       Host: uae.unixzone.us
 - name: 🇦🇪 阿联酋 (UAE) 07 - xiaohe
   type: vless
-  server: 84.235.244.108
-  port: 22573
-  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
+  server: 95.174.68.188
+  port: 14430
+  uuid: 965ffbbe-c6b6-4d5f-8dea-6d8abc55d9c0
   udp: true
   tls: false
   skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /
+    path: /vless
     headers:
-      Host: uae.unixzone.us
+      Host: 95.174.68.188
 - name: 🇦🇪 阿联酋 (UAE) 08 - xiaohe
   type: vless
   server: 95.174.68.188
@@ -109,33 +109,6 @@ proxies:
     headers:
       Host: 95.174.68.188
 - name: 🇦🇪 阿联酋 (UAE) 09 - xiaohe
-  type: vless
-  server: 83.147.216.223
-  port: 4433
-  uuid: 660174a2-d32d-4521-840d-d1853bfc80b8
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: 3t1yvbyla-rj740g.28m7r63dttya6gazmhoo.workers.dev
-  network: ws
-  ws-opts:
-    path: /@Marisa_kristi
-    headers:
-      Host: 3t1yvbyla-rj740g.28m7r63dttya6gazmhoo.workers.dev
-- name: 🇦🇪 阿联酋 (UAE) 10 - xiaohe
-  type: vless
-  server: 95.174.68.188
-  port: 14430
-  uuid: 965ffbbe-c6b6-4d5f-8dea-6d8abc55d9c0
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 95.174.68.188
-- name: 🇦🇪 阿联酋 (UAE) 11 - xiaohe
   type: vless
   server: 95.174.68.188
   port: 14430
@@ -162,8 +135,6 @@ proxy-groups:
   - 🇦🇪 阿联酋 (UAE) 07 - xiaohe
   - 🇦🇪 阿联酋 (UAE) 08 - xiaohe
   - 🇦🇪 阿联酋 (UAE) 09 - xiaohe
-  - 🇦🇪 阿联酋 (UAE) 10 - xiaohe
-  - 🇦🇪 阿联酋 (UAE) 11 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -178,7 +149,5 @@ proxy-groups:
   - 🇦🇪 阿联酋 (UAE) 07 - xiaohe
   - 🇦🇪 阿联酋 (UAE) 08 - xiaohe
   - 🇦🇪 阿联酋 (UAE) 09 - xiaohe
-  - 🇦🇪 阿联酋 (UAE) 10 - xiaohe
-  - 🇦🇪 阿联酋 (UAE) 11 - xiaohe
 rules:
 - MATCH,PROXIES
