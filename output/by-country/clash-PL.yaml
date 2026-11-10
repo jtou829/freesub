@@ -6,7 +6,16 @@ log-level: info
 proxies:
 - name: 🇵🇱 PL 01 - xiaohe
   type: vless
-  server: 151.245.112.193
+  server: 2.26.6.1
+  port: 2087
+  uuid: b9fdc03f-389b-4cda-9be4-155b623bee15
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: 2.26.6.1
+- name: 🇵🇱 PL 02 - xiaohe
+  type: vless
+  server: 188.137.178.174
   port: 8443
   uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
   udp: true
@@ -15,18 +24,9 @@ proxies:
   servername: fs.qicai99.com
   network: ws
   ws-opts:
-    path: /fp=chrome
+    path: /
     headers:
       Host: fs.qicai99.com
-- name: 🇵🇱 PL 02 - xiaohe
-  type: vless
-  server: 2.26.6.1
-  port: 2087
-  uuid: b9fdc03f-389b-4cda-9be4-155b623bee15
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: 2.26.6.1
 proxy-groups:
 - name: PROXIES
   type: select
