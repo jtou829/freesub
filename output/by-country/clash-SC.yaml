@@ -4,31 +4,31 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇵🇱 PL 01 - xiaohe
+- name: 🇸🇨 SC 01 - xiaohe
   type: vless
-  server: 144.31.3.89
+  server: 104.21.209.174
   port: 443
-  uuid: 58e22afd-bf74-4736-984d-63a8ca03d7f0
+  uuid: 92720ee3-27b3-4204-ad2f-d5c8570a4404
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: clearingmatch.melodramaonline.net
+  servername: auth-api-fbb93f-gw.dev-team-63276e.workers.dev
   network: ws
   ws-opts:
-    path: /media/ws/
+    path: /0df6c30383d404f8?ed=2560
     headers:
-      Host: 144.31.3.89
+      Host: auth-api-fbb93f-gw.dev-team-63276e.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇵🇱 PL 01 - xiaohe
+  - 🇸🇨 SC 01 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - 🇵🇱 PL 01 - xiaohe
+  - 🇸🇨 SC 01 - xiaohe
 rules:
 - MATCH,PROXIES
