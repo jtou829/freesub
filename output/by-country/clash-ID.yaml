@@ -6,29 +6,43 @@ log-level: info
 proxies:
 - name: 🇮🇩 ID 01 - xiaohe
   type: vless
-  server: 188.114.98.0
+  server: 110.232.84.214
   port: 443
-  uuid: 53bbdad4-2f4e-45db-8df4-fa491a6a7227
+  uuid: c3d91e48-6d7c-406d-aea3-b99c575dcd80
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: freeceshi6.frii.site
+  servername: id1vpn.jagoanip.my.id
   network: ws
   ws-opts:
-    path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2048
+    path: /vless
     headers:
-      Host: freeceshi6.frii.site
+      Host: id1vpn.jagoanip.my.id
+- name: 🇮🇩 ID 02 - xiaohe
+  type: vless
+  server: 130.94.95.126
+  port: 443
+  uuid: ed94398f-893f-40c6-b14c-bf02b5f6be16
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: UT9tFQOdy54SeW_tg-XQN3QkGYoWUpO_88XFXijkrXc
+  servername: navi.bankrate.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇮🇩 ID 01 - xiaohe
+  - 🇮🇩 ID 02 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - 🇮🇩 ID 01 - xiaohe
+  - 🇮🇩 ID 02 - xiaohe
 rules:
 - MATCH,PROXIES
